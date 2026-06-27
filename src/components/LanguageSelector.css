@@ -1,0 +1,71 @@
+.lang-selector-wrap {
+  position: relative;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.lang-selector:hover,
+.lang-selector--open {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.lang-selector__icon,
+.lang-selector__chevron {
+  width: 16px;
+  height: 16px;
+}
+
+.lang-selector--open .lang-selector__chevron {
+  transform: rotate(180deg);
+}
+
+.lang-selector__chevron {
+  transition: transform 0.2s;
+}
+
+.lang-selector__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  min-width: 160px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: #0f2552;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.lang-selector__option {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-selector__option:hover,
+.lang-selector__option.is-active {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+}

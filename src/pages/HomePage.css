@@ -1,0 +1,108 @@
+.home-page {
+  min-height: 100svh;
+  background: linear-gradient(180deg, var(--navy) 0%, #081633 100%);
+}
+
+.home-page__header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 24px;
+  text-align: center;
+  color: var(--white);
+}
+
+.home-page__header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.home-page__header-top .brand {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.home-page__header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.home-page__header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.home-page__grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.executive-preview {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 20px 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.executive-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.executive-preview__avatar {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--blue);
+  overflow: hidden;
+}
+
+.executive-preview__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.executive-preview h2 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  color: var(--text-dark);
+}
+
+.executive-preview p {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.executive-preview__link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .home-page__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}

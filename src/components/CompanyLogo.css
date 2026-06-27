@@ -1,0 +1,41 @@
+.company-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.company-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 14% center;
+}
+
+.company-logo-wrap--header {
+  width: 96px;
+  height: 96px;
+}
+
+.company-logo-wrap--footer {
+  width: 108px;
+  height: 108px;
+}
+
+.company-logo-wrap--card {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .company-logo-wrap--header {
+    width: 80px;
+    height: 80px;
+  }
+}
